@@ -59,9 +59,11 @@ public:
 	// A vector of Cards
 	Hand(Card C);
 
-	void push_back_hand();
+	void push_back_hand(Card C);
 
 	void printhand();
+
+	double getscore();
 	// You decide what functions you'll need...
 
 private:

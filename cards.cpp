@@ -139,8 +139,30 @@ Hand::Hand(Card C) {
 	Card_Vec = { C };
 }
 
-Hand::push_back_hand(Card C) {
+void Hand::push_back_hand(Card C) {
 	Card_Vec.push_back(C);
+}
+
+void Hand::printhand() {
+
+	for (int i = 0, i < Card_Vec.size(), ++i) {
+		std::cout << "   " << Card_Vec[i] << std::endl;
+	}
+
+}
+
+double Hand::getscore() {
+	double score=0;
+	for (int i = 0, i < Card_Vec.size(), ++i) {
+		double singlescore = 0;
+		if (Card_Vec[i].get_rank() < 9)
+		{
+			singlescore = Card_Vec[i].get_rank();
+		}
+		else singlescore = 0.5;
+		score += singlescore;
+	}
+	return score;
 }
 
 
