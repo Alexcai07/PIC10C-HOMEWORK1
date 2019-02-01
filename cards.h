@@ -1,8 +1,4 @@
-/* *************************************
-   Ricardo Salazar, February 26, 2015
 
-   Interface of a simple Card class
-   ************************************* */
 
 #include <string>
 #include <vector>
@@ -61,12 +57,15 @@ private:
 class Hand {
 public:
 	// A vector of Cards
-	Hand();
+	Hand(Card C);
 
+	void push_back_hand();
+
+	void printhand();
 	// You decide what functions you'll need...
 
 private:
-	// You decide what fields you'll need...
+	std::vector<card> Card_Vec;
 };
 
 
