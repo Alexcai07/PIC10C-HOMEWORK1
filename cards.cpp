@@ -173,8 +173,12 @@ double Hand::getscore() {
 
 Player::Player(int m):money(m){}
 
-void Player::change_hand(Hand h) {
-	playerhand = h;
+void Player::addinitialcard(Card C) {
+	playerhand = { C };
+}
+
+void Player::addcard(Card C) {
+	playerhand.push_back_hand(C);
 }
 
 void Player::change_money(int m) {

@@ -76,7 +76,8 @@ public:
 	// Constructor. 
 	//    Assigns initial amount of money
 	Player(int m);
-	void change_hand(Hand h);
+	void addinitialcard(Card C);
+	void addcard(Card C);
 	void change_money(int m);
 	int get_money()const;
 	Hand get_hand()const;

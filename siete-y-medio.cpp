@@ -20,9 +20,14 @@ using namespace std;
 int main() {
 	Card test1, test2;
 	Hand testhand(test1);
-	testhand.push_back_hand(test2);
-	testhand.printhand();
-	cout << testhand.getscore();
+	Player player1(100);
+	player1.addinitialcard(test1);
+	player1.get_hand().printhand();
+	player1.addcard(test2);
+	player1.get_hand().printhand();
+	cout<<player1.get_money()<<endl;
+	player1.change_money(-200);
+	cout << player1.get_money() << endl;
 	cin.get();
 	return 0;
 }
