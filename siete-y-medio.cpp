@@ -9,8 +9,15 @@ using namespace std;
 
 
 int main() {
+	Card C;
+	Hand H();
+	cout << H <<endl ;
 
-	Player You(100);
+
+
+
+
+/*	Player You(100);
 	while (You.get_money() > 0)
 	{
 		cout << "You have $" << You.get_money() << ". Enter bet:" << endl;
@@ -80,7 +87,7 @@ int main() {
 	}
 	
 	cout << "You are so poor now, earn more money and come later!" << endl;
-
+*/
 
 /*	Card test1, test2;
 	Hand testhand(test1);

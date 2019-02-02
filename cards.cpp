@@ -140,8 +140,8 @@ Hand::Hand(Card C) {
 }
 
 Hand::Hand() {
-	Card C;
-	Card_Vec = { C };
+	
+	Card_Vec = { };
 }
 
 void Hand::push_back_hand(Card C) {
@@ -150,7 +150,7 @@ void Hand::push_back_hand(Card C) {
 
 void Hand::printhand() {
 
-	for (int i = 0; i < Card_Vec.size(); ++i) {
+	for (unsigned int i = 0; i < Card_Vec.size(); ++i) {
 		std::cout << "   " << Card_Vec[i].get_spanish_rank() << std::endl;
 	}
 
@@ -158,7 +158,7 @@ void Hand::printhand() {
 
 double Hand::getscore() {
 	double score=0;
-	for (int i = 0; i < Card_Vec.size(); ++i) {
+	for (unsigned int i = 0; i < Card_Vec.size(); ++i) {
 		double singlescore = 0;
 		if (Card_Vec[i].get_rank() < 9)
 		{
