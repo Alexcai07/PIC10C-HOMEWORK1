@@ -139,6 +139,11 @@ Hand::Hand(Card C) {
 	Card_Vec = { C };
 }
 
+Hand::Hand() {
+	Card C;
+	Card_Vec = { C };
+}
+
 void Hand::push_back_hand(Card C) {
 	Card_Vec.push_back(C);
 }
@@ -166,7 +171,18 @@ double Hand::getscore() {
 }
 
 
-   /* *************************************************
-	  Player class
-	  ************************************************* */
-	  // Implemente the member functions of the Player class here.
+Player::Player(int m):money(m){}
+
+void Player::change_hand(Hand h) {
+	playerhand = h;
+}
+
+void Player::change_money(int m) {
+	money += m;
+}
+int Player::get_money()const {
+	return money;
+}
+Hand Player::get_hand()const {
+	return playerhand;
+}

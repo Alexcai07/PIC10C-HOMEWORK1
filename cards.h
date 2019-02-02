@@ -58,7 +58,7 @@ class Hand {
 public:
 	// A vector of Cards
 	Hand(Card C);
-
+	Hand();
 	void push_back_hand(Card C);
 
 	void printhand();
@@ -76,12 +76,15 @@ public:
 	// Constructor. 
 	//    Assigns initial amount of money
 	Player(int m);
-
-	// You decide what functions you'll need...
+	void change_hand(Hand h);
+	void change_money(int m);
+	int get_money()const;
+	Hand get_hand()const;
 
 private:
 	int money;
-	// You decide what extra fields (if any) you'll need...
+	Hand playerhand;
+	
 };
 
 #endif

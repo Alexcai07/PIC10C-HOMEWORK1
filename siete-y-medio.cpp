@@ -18,6 +18,11 @@ using namespace std;
 
 // Stub for main
 int main() {
-	/* --STATEMENTS-- */
+	Card test1, test2;
+	Hand testhand(test1);
+	testhand.push_back_hand(test2);
+	testhand.printhand();
+	cout << testhand.getscore();
+	cin.get();
 	return 0;
 }
