@@ -9,8 +9,7 @@ using namespace std;
 
 
 int main() {
-	
-	Card A, B, C;
+/*  Card A, B, C;
 	Player P(100, A);
 	P.addcard(B);
 	P.get_hand().printhand();
@@ -20,8 +19,8 @@ int main() {
 	H.push_back_hand(C);
 	H.printhand();
 	cout<<H.getscore();
-
-/*	Card K;
+*/
+	Card K;
 	Player You(100,K);
 	while (You.get_money() > 0)
 	{
@@ -46,7 +45,7 @@ int main() {
 		while (yesorno == "y")
 		{
 			Card C;
-			You.get_hand().push_back_hand(C);
+			You.addcard(C);
 			cout << "New card:" << endl;
 			cout << C.get_spanish_rank()<<endl<<endl;
 			if (You.get_hand().getscore() > 7.5)
