@@ -9,7 +9,19 @@ using namespace std;
 
 
 int main() {
-	Card K;
+	
+	Card A, B, C;
+	Player P(100, A);
+	P.addcard(B);
+	P.get_hand().printhand();
+	cout<<P.get_hand().getscore()<<endl;
+	Hand H(A);
+	H.push_back_hand(B);
+	H.push_back_hand(C);
+	H.printhand();
+	cout<<H.getscore();
+
+/*	Card K;
 	Player You(100,K);
 	while (You.get_money() > 0)
 	{
@@ -94,6 +106,7 @@ int main() {
 	player1.change_money(-200);
 	cout << player1.get_money() << endl;
 	*/
+	cin.get();
 	cin.get();
 	return 0;
 }
