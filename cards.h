@@ -67,7 +67,7 @@ public:
 	// You decide what functions you'll need...
 
 private:
-	std::vector<card> Card_Vec;
+	std::vector<Card> Card_Vec;
 };
 
 
