@@ -187,6 +187,6 @@ void Player::change_money(int m) {
 int Player::get_money()const {
 	return money;
 }
-Hand Player::get_hand()const {
+Hand Player::get_hand(){
 	return playerhand;
 }

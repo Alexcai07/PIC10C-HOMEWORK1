@@ -80,7 +80,7 @@ public:
 	void addcard(Card C);
 	void change_money(int m);
 	int get_money()const;
-	Hand get_hand()const;
+	Hand get_hand();
 
 private:
 	int money;
