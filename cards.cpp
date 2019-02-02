@@ -171,7 +171,7 @@ double Hand::getscore() {
 }
 
 
-Player::Player(int m):money(m){}
+Player::Player(int m, Card C):money(m),playerhand(C){}
 
 void Player::addinitialcard(Card C) {
 	playerhand = { C };

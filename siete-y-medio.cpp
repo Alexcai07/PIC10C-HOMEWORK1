@@ -9,8 +9,8 @@ using namespace std;
 
 
 int main() {
-
-	Player You(100);
+	Card K;
+	Player You(100,K);
 	while (You.get_money() > 0)
 	{
 		cout << "You have $" << You.get_money() << ". Enter bet:" << endl;
@@ -28,6 +28,7 @@ int main() {
 		while ((yesorno != "y") && (yesorno != "n"))
 		{
 			cout << "Invalid input, you should only answer y or n" << endl;
+			cin.clear();
 			cin >> yesorno;
 		}
 		while (yesorno == "y")
@@ -60,12 +61,12 @@ int main() {
 			cout << "You win " << bet << "." << endl << endl;
 			You.change_money(bet);
 		}
-		else if(dealer.getscore()<You.get_hand().getscore())
+		else if(dealer.getscore() < You.get_hand().getscore())
 		{
 			cout << endl << endl << "You win " << bet << endl;
 			You.change_money(bet);
 		}
-		else if (dealer.getscore() < You.get_hand().getscore())
+		else if (dealer.getscore() > You.get_hand().getscore())
 		{
 			You.change_money(-bet);
 			cout << "You lose! You now have $" << You.get_money() << endl;

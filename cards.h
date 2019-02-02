@@ -75,7 +75,7 @@ class Player {
 public:
 	// Constructor. 
 	//    Assigns initial amount of money
-	Player(int m);
+	Player(int m, Card C);
 	void addinitialcard(Card C);
 	void addcard(Card C);
 	void change_money(int m);
